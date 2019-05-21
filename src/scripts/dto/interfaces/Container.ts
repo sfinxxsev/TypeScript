@@ -1,3 +1,5 @@
+import {Entity} from "./Entity";
+
 interface Container {
 
     getContainerCount():number;
@@ -53,3 +55,5 @@ interface Container {
 
     setEntity(value:Entity):void;
 }
+
+export { Container };

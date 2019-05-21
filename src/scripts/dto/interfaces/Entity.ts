@@ -5,3 +5,5 @@ interface Entity {
     setName(value:string):void;
     setUID(value:number):void;
 }
+
+export { Entity };

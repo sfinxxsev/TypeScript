@@ -1,3 +1,6 @@
+import {Entity} from "./interfaces/Entity";
+import {Container} from "./interfaces/Container";
+
 class ContainerImpl implements Container {
     private containerCount:number;
     private containerNumber:string;
@@ -118,3 +121,5 @@ class ContainerImpl implements Container {
     }
 
 }
+
+export { ContainerImpl };
