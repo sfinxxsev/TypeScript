@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {},
   "scripts": {
-    "run": "webpack"
+    "run": "webpack --mode development",
+    "prod": "webpack --mode production"
   },
   "devDependencies": {
     "ts-loader": "5.4.3",
