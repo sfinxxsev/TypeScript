@@ -2,6 +2,23 @@
   "rules": {
     "no-any": true,
     "curly": true,
-    "quotemark": [true, "double"]
+    "quotemark": [true, "double"],
+    "prefer-const": true,
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "no-var-keyword": true,
+    "ban": [
+      true,
+      "setInterval",
+      "setTimeout"
+    ],
+    "ban-types": {
+      "options": [
+        ["Object", "Avoid using the `Object` type. Did you mean `object`?"],
+        ["Function", "Avoid using the `Function` type. Prefer a specific function type, like `() => void`, or use `ts.AnyFunction`."],
+        ["Boolean", "Avoid using the `Boolean` type. Did you mean `boolean`?"],
+        ["Number", "Avoid using the `Number` type. Did you mean `number`?"],
+        ["String", "Avoid using the `String` type. Did you mean `string`?"]
+      ]
+    }
   }
 }
