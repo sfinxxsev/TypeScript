@@ -1,16 +1,26 @@
-import {ContainerImpl} from "./dto/ContainerImpl";
-import {EntityImpl} from "./dto/EntityImpl";
-import {Container} from "./dto/interfaces/Container";
+import {Dictionary} from "./Dictionary";
+import {KeyTypesEnum} from "./KeyTypesEnum";
 
 function init() {
-    let container:Container;
-    container = new ContainerImpl();
+    const firstLineKey = 'firstLine';
 
-    container.setItemQty(1);
-    container.setUid('123321');
-    container.setEntity(new EntityImpl('entity_1', 321));
+    const dictionary = new Dictionary<string, number>();
+    const dictionary2 = new Dictionary<KeyTypesEnum, string>();
 
-    alert(`qty = ${container.getItemQty()},  uid = ${container.getUid()}, entity = ${container.getEntity().getName()}`);
+    dictionary.put(firstLineKey, 1);
+    dictionary.put('secondLine', 2);
+    dictionary.put(null, 2);
+
+    dictionary2.put(KeyTypesEnum.PRIMARY, '1111');
+    dictionary2.put(KeyTypesEnum.SECONDARY, '2222');
+
+    alert('first line = ' + dictionary.get(firstLineKey));
+    alert(dictionary.getKeys());
+    alert(dictionary.getValues());
+
+    alert('selected type = ' + dictionary2.get(KeyTypesEnum.SECONDARY));
+    alert(dictionary2.getKeys());
+    alert(dictionary2.getValues());
 }
 
 init();
